@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI - Portal de Validação</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #container {
+            text-align: center;
+        }
+
+        #email {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Portal de Validação</h1>
+        <label for="email">Digite seu e-mail:</label>
+        <input type="text" id="email" name="email" required>
+        <br>
+        <button onclick="validarEmail()">Validar</button>
+    </div>
+
+    <script>
+        function validarEmail() {
+            var email = document.getElementById('email').value;
+            var emailsValidos = ["geovanny.saraiva@gmail.com", "luis.geovanny@beachpark.com"];
+
+            if (emailsValidos.includes(email)) {
+                window.location.href = "https://app.powerbi.com/view?r=eyJrIjoiODZkOTBjZDgtMGIzMC00ZTE2LWE4Y2QtYWFhZTEwZWIxMDdhIiwidCI6IjVkNGI5OGM5LTM5MmYtNGM4Ny05OWE5LTUyNjA3ODE0MDUxZCJ9";
+            } else {
+                alert("Credenciais inválidas. Tente novamente.");
+            }
+        }
+    </script>
+
+</body>
+</html>
